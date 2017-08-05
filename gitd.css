@@ -1,0 +1,383 @@
+/* Colors
+3c3 dark green
+9f9 lime green
+999 gray
+*/
+
+
+/* CSS Reset */
+
+label {
+    margin-bottom: initial;
+    padding-right: initial;
+    width: initial;
+    font-size: inherit;
+    line-height: initial;
+    display: inline;
+}
+
+select {
+    width: initial;
+}
+
+button[type="roll"] {
+    margin-left: initial;
+    margin-right: initial;
+}
+
+input {
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    width: initial;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.sheet-character, .sheet-tribe, .sheet-factions {
+    background: white;
+    color: #000;
+    height: 100%;
+    clear: both;
+    font-family: Quicksand, sans-serif;
+    font-size: .8rem;
+}
+
+p, label, h1, h2, h3, body, li {
+    font-family: Quicksand, sans-serif;
+    line-height: initial;
+}
+
+
+/* Roll20 uses this to contain the tab content */
+
+.charsheet {
+    width: 860px;
+    position: absolute;
+    padding: 0 10px 0 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+}
+html {
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+
+/* FONT STYLES */
+
+.sheet-text {
+    font-family: Quicksand, "Century Gothic", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat Alternates", Montserrat, "Century Gothic", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: initial;
+}
+
+h1 {
+    font-size: 3em;
+    margin-right: 1em;
+}
+
+h2 {
+    font-size: .8em;
+    text-align: right;
+    color: #999;
+}
+
+h1.sheet-logo {
+    background: url('https://dl.dropboxusercontent.com/u/22029806/roll20/gitd/logo.png') no-repeat left center;
+    color: transparent;
+    background-size: contain;
+}
+
+h1.sheet-playbook {
+    color: #999;
+    width: 30%;
+}
+
+h1.sheet-playbook input {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+h3 {
+    color: white;
+    background: black;
+    font-size: 1em;
+    padding: 4px;
+    font-weight: 300;
+}
+
+b {
+    font-weight: bold;
+}
+input[type=text], textarea {
+    font-family: cursive;
+}
+
+
+/*Structure*/
+
+input:checked+label+.sheet-tab {
+    max-height: initial;
+}
+
+.sheet-tab {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    -webkit-transition: max-height .5s -o-transition: max-height .5s;
+}
+
+.sheet-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+.sheet-columns > * {
+    padding: .5em;
+    float: left;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sheet-bio {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.sheet-bio input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.sheet-load, .sheet-actions {
+    width: 25%;
+}
+.sheet-actions {
+    float: right;
+}
+
+.sheet-load ul, .sheet-actions ul {
+    margin: .25em 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sheet-load ul ul {
+    margin-left: 1.5em;
+    padding: 0;
+}
+
+.sheet-actions h3, .sheet-supplies p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sheet-friend, .sheet-supplies p {
+    margin-top: .25em;
+}
+.sheet-friend input {
+    width: 75%;
+}
+.sheet-stress-dots {
+    display:flex;
+    flex-wrap:nowrap;
+    margin: .25em 0;
+}
+div.sheet-harm {
+    display:flex;
+    flex-direction:column;
+}
+div.sheet-harm input {
+    width: 35%;
+}
+div.sheet-harm3 input {
+    width: 70%;
+}
+div.sheet-harm3, div.sheet-harm2, div.sheet-harm1 {
+    border-bottom: 1px solid black;
+}
+div.sheet-harm1 > b, div.sheet-harm2 > b, div.sheet-harm3 > b {
+    display:inline-block;
+    width:10%;
+}
+div.sheet-harm input+b {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    float:right;
+}
+div.sheet-notes {
+    width:75%;
+}
+textarea[name=attr_notes] {
+    width: 100%;
+    border-radius:0;
+}
+div.sheet-clock {
+    margin: .25em 0;
+}
+.sheet-clock-progress {
+    height: .5em;
+    width: 33%;
+    background: #3c3;
+}
+.sheet-clock-progress-container {
+    background: #999;
+}
+.sheet-clock input[type=number][value="4"] ~.sheet-clock-progress-container > .sheet-clock-progress {
+  background:red;
+}
+
+/*Selectables*/
+
+input.sheet-selectable {
+    position: absolute;
+    left: -999em;
+}
+
+.sheet-bio label span:before {
+    content: " - ";
+}
+
+.sheet-bio p label:nth-of-type(1) span:before {
+    content: none;
+}
+
+.sheet-bio label input:checked+span {
+    color: #3c3;
+}
+
+.sheet-load li label, .sheet-bio label span, .sheet-actions li label {
+    cursor: pointer;
+}
+
+span.sheet-dot:before, i.sheet-dot {
+    display: inline-block;
+    margin-right: .5em;
+    width: .8em;
+    height: .8em;
+    border: 1px solid black;
+    border-radius: 50%;
+    content: '';
+}
+
+input:checked~span.sheet-dot:before {
+    background: #3c3;
+}
+
+.sheet-actions li label:first-child span.sheet-dot {
+    border-right: 1px solid black;
+}
+
+input[type=number] {
+    padding:0;
+    margin:0;
+    border-radius:0;
+    border:none;
+    width:2.5em!important;
+}
+select {
+    padding:0;
+    margin:0;
+    border-radius:0;
+    height:initial;
+    line-height:initial;
+}
+.sheet-trauma select {
+    margin: .25em 0;
+}
+
+.sheet-arrow-up, .sheet-arrow-down {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: .25em;
+    margin: .25em;
+    cursor: pointer;
+}
+
+label input:checked+i {
+    border-color: #3c3;
+}
+
+.sheet-arrow-up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.sheet-arrow-down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
