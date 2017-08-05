@@ -1,0 +1,322 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Quicksand" rel="stylesheet">
+<input type="radio" name="attr_sheet" value="character" checked /><label>Character</label>
+<div class="sheet-tab sheet-character">
+	<div class="sheet-header">
+		<h1 class="sheet-logo">Glow in the Dark</h1>
+		<h1 class="sheet-playbook"><input type="text" name="attr_playbook" placeholder="Playbook" /></h1>
+		<h2>Smarmy subtitle<br/>Second line</h2>
+	</div>
+
+	<div class="sheet-columns">
+		<!-- Bio -->
+		<div class="sheet-bio">
+			<p>
+				<input type="text" name="attr_name" value="" />
+				<b>Name</b>
+			</p>
+			<p>
+				<input type="text" name="attr_look" value="" />
+				<b>Look</b>
+			</p>
+			<p>
+				<input type="text" name="attr_bg" value="" />
+				<b>Background:</b>
+				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="1" /><span>On the Run</span></label>
+				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="2" /><span>Vengeance</span></label>
+				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="3" /><span>Web of Lies</span></label>
+			</p>
+			<p>
+				<input type="text" name="attr_taboo" value="" />
+				<b>Taboo</b>
+			</p>
+			<p>
+				<input type="text" name="attr_vice" value="" />
+				<b>Vice/Purveyor:</b>
+				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="denial" /><span>Denial</span></label>
+				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="duty" /><span>Duty</span></label>
+				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="faith" /><span>Faith</span></label>
+				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="gambling" /><span>Gambling</span></label>
+				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="luxury" /><span>Luxury</span></label>
+				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="pleasure" /><span>Pleasure</span></label>
+				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="stupor" /><span>Stupor</span></label>
+			</p>
+		</div>
+		<!-- Load/friends -->
+		<div class="sheet-load">
+			<h3>Load: <span class="sheet-load-total">0 light</span></h3>
+			<ul>
+				<li><label><input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" /><span class="sheet-dot"></span>One-load item</label></li>
+				<li><label><input type="checkbox" class="sheet-selectable" name="attr_items[]" value="2" /><span class="sheet-dot"></span><span class="sheet-dot"></span>Two-load item</label></li>
+				<ul>
+					<li><label><input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" /><span class="sheet-dot">Item +modifier</span></label></li>
+				</ul>
+				<li>
+    				<label>
+                        <input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" />
+                        <span class="sheet-dot"></span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" />
+                        <span class="sheet-dot"></span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" />
+                        <span class="sheet-dot"></span>
+                        Multiple dot item
+                    </label>
+				</li>
+			</ul>
+			<h3>Friends</h3>
+			<fieldset class="repeating_friends">
+				<div class="sheet-friend">
+					<label><input type="radio" class="sheet-selectable" name="attr_friend" value="friend" /><i class="sheet-arrow-up"></i></label>
+					<label><input type="radio" class="sheet-selectable" name="attr_friend" value="rival" /><i class="sheet-arrow-down"></i></label>
+					<input type="text" name="attr_friend_name" placeholder="Foo, a Bar" />
+				</div>
+			</fieldset>
+		</div>
+		<!-- actions -->
+		<div class="sheet-actions">
+		    <h3>
+                Insight
+                <span>XP <input type="number" name="attr_insight_xp" value="0" max="6" min="0" /></span>
+            </h3>
+			<ul>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Hack</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Hunt</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Read</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Scrounge</b>
+				</li>
+			</ul>
+			<h3>
+                Prowess
+                <span>XP <input type="number" name="attr_prowess_xp" value="0" max="6" min="0" /></span>
+            </h3>
+			<ul>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Finesse</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Prowl</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Raid</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Wreck</b>
+				</li>
+			</ul>
+			<h3>
+                Resolve
+                <span>XP <input type="number" name="attr_resolve_xp" value="0" max="6" min="0" /></span>
+            </h3>
+			<ul>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Barter</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Boss</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Sway</b>
+				</li>
+				<li>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
+					<b>Trek</b>
+				</li>
+			</ul>
+			<h3>Bonus Die +1d</h3>
+			<b>Push Yourself:</b> Pay 2 stress OR Accept a <b>Devil’s Bargain</b>
+			<h3>Teamwork</h3>
+			<p><b>Assist</b> another character. Pay 1 stress, give bonus die.</p>
+			<p>Lead a <b>group action</b>. Use best result, leader takes stress for fails.</p>
+			<p><b>Protect</b> a teammate. You make the resistance roll.</p>
+			<p><b>Set up</b> another character. Take action, adjust position/effect.</p>
+			<h3>Planning</h3>
+			<p>Choose a <b>plan</b>. Provide the <b>detail</b>.</p>
+            <p><b>Assault:</b> Point of attack.</p>
+            <p><b>Deception:</b> Method.</p>
+            <p><b>Stealth:</b> Entry point.</p>
+            <p><b>Social:</b> Social connection.</p>
+            <p><b>Transport:</b> Locations/route.</p>
+            <h3>Gather Information</h3>
+            <p>What do they intend to do? - How can I get them to X? - What are they really feeling? - What should I be worried about? - Where’s the weakness here? - How can I find X? - What’s really going on here? - Ask about a detail for a plan.</p>
+		</div>
+		<div class="sheet-stress">
+		    <h3>Stress</h3>
+		    <div class="sheet-stress-dots">
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+		    </div>
+		</div>
+		<div class="sheet-trauma">
+		    <h3>Trauma</h3>
+		    <fieldset class="repeating_trauma">
+                <select name="attr_trauma">
+                    <option value="cold">Cold</option>
+                    <option value="obsessed">Obsessed</option>
+                    <option value="reckless">Reckless</option>
+                    <option value="paranoid">Paranoid</option>
+                    <option value="sickened">Sickened</option>
+                    <option value="soft">Soft</option>
+                    <option value="unstable">Unstable</option>
+                    <option value="vicious">Vicious</option>
+                </select>
+		    </fieldset>
+		</div>
+		<div class="sheet-supplies">
+		    <h3>
+                Supplies
+                <span><input type="number" name="attr_supplies" value="0" max="4" min="0" /></span>
+            </h3>
+            <p>
+				<b>Stash</b> <input type="number" name="attr_stash" value="0" min="0" />
+			</p>
+		</div>
+		<div class="sheet-harm">
+		    <h3>Harm</h3>
+		    <div class="sheet-harm3"><b>3</b><input type="text" class="sheet-harm3" name="attr_harm3" placeholder="Level 3 Harm" /><b>Need Help</b></div>
+		    <div class="sheet-harm2"><b>2</b><input type="text" class="sheet-harm2" name="attr_harm2a" placeholder="Level 2 Harm" /><input type="text" class="sheet-harm2" name="attr_harm2b" placeholder="Level 2 Harm" /><b>-1d</b></div>
+		    <div class="sheet-harm1"><b>1</b><input type="text" class="sheet-harm1" name="attr_harm1a" placeholder="Level 1 Harm" /><input type="text" class="sheet-harm1" name="attr_harm1b" placeholder="Level 1 Harm" /><b>-Effect</b></div>
+		</div>
+		<div class="sheet-clocks">
+		    <h3>Clocks</h3>
+		    <fieldset class="repeating_clocks">
+		        <div class="sheet-clock">
+		            <input type="text" name="attr_clock_name" placeholder="Clock Name" />
+		            <input type="number" name="attr_clock_filled" value="0" max="12" min="0" /> out of
+		            <select name="attr_clock_ticks">
+		                <option value="4">4</option>
+		                <option value="6">6</option>
+		                <option value="8">8</option>
+		                <option value="12">12</option>
+		            </select>
+		            <div class="sheet-clock-progress-container"><div class="sheet-clock-progress"></div></div>
+		        </div>
+		    </fieldset>
+		</div>
+		<div class="sheet-notes">
+		    <h3>Notes</h3>
+		    <textarea name="attr_notes"></textarea>
+		</div>
+	</div> <!-- / columns -->
+</div>
+
+<input type="radio" name="attr_sheet" value="tribe" /><label>Tribe</label>
+<div class="sheet-tab sheet-tribe">
+	<h1>Glow in the Dark</h1>
+</div>
+
+<input type="radio" name="attr_sheet" value="factions" /><label>Factions</label>
+<div class="sheet-tab sheet-factions">
+	<h1>Glow in the Dark</h1>
+</div>
+
+<script type="text/worker">
+console.log("WORKERS UNITE");
+
+on("change:repeating_clocks:clock_ticks change:repeating_clocks:clock_filled", function(eventInfo) {
+    console.log('eventInfo', eventInfo);
+    console.log('what is THIS', this);
+    getAttrs(["repeating_clocks_clock_filled", "repeating_clocks_clock_ticks"], function(vals) {
+       console.log('values for onChange', vals);
+       // set div width to percentage
+       var clockPercentage = parseInt(vals.repeating_clocks_clock_filled) / parseInt(vals.repeating_clocks_clock_ticks);
+       console.log('clockPercentage', clockPercentage);
+       
+    });
+    getSectionIDs("repeating_clocks", function(idarray) {
+        console.log('section IDs', idarray);
+    });
+    setAttrs({
+        repeating_clocks_clock_filled:vals.repeating_clocks_clock_filled
+    });
+});
+</script>
+<script>
+
+	// set up event bindings
+	for (var i = 0; i < document.getElementsByName('attr_items[]').length; i++) {
+		document.getElementsByName('attr_items[]')[i].addEventListener("click", function() {
+			calcLoad(document.getElementsByName('attr_items[]'));
+		});
+	}
+	//for (var i=0;i<itemz.length;i++){if (itemz[i].checked) {load = load + parseInt(itemz[i].value);}}
+	var calcLoad = function(items) {
+		var load = 0;
+		for (var i = 0; i < items.length; i++) {
+			if (items[i].checked) {
+				load = load + parseInt(items[i].value);
+			}
+		}
+		console.log('Current load is ' + load);
+		var upkeep = 'light';
+		if (load > 5) {
+			upkeep = 'heavy';
+		} else if (load > 2) {
+			upkeep = 'medium';
+		}
+		document.getElementsByClassName('sheet-load-total')[0].innerHTML = load + ' ' + upkeep;
+	}
+</script>
