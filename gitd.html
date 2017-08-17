@@ -43,34 +43,32 @@
 		</div>
 		<!-- Load/friends -->
 		<div class="sheet-load">
-			<h3>Load: <span class="sheet-load-total">0 light</span></h3>
-			<ul>
-				<li><label><input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" /><span class="sheet-dot"></span>One-load item</label></li>
-				<li><label><input type="checkbox" class="sheet-selectable" name="attr_items[]" value="2" /><span class="sheet-dot"></span><span class="sheet-dot"></span>Two-load item</label></li>
-				<ul>
-					<li><label><input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" /><span class="sheet-dot">Item +modifier</span></label></li>
-				</ul>
-				<li>
-    				<label>
-                        <input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" />
-                        <span class="sheet-dot"></span>
-                    </label>
-                    <label>
-                        <input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" />
-                        <span class="sheet-dot"></span>
-                    </label>
-                    <label>
-                        <input type="checkbox" class="sheet-selectable" name="attr_items[]" value="1" />
-                        <span class="sheet-dot"></span>
-                        Multiple dot item
-                    </label>
-				</li>
-			</ul>
+			<h3>Load: <span name="attr_loadtotal">0</span> <span name="attr_loadtitle">light</span></h3>
+			<fieldset class="repeating_playbookitems">
+			    <input type="hidden" name="attr_ploaddots" />
+			    <div class="sheet-playbookitem">
+    			    <label><input type="checkbox" class="sheet-selectable" name="attr_pload1" value="1" /><span class="sheet-dot"></span></label>
+    			    <label><input type="checkbox" class="sheet-selectable" name="attr_pload2" value="1" /><span class="sheet-dot"></span></label>
+    			    <label><input type="checkbox" class="sheet-selectable" name="attr_pload3" value="1" /><span class="sheet-dot"></span></label>
+    			    <label><input type="checkbox" class="sheet-selectable" name="attr_pload0" value="1" /><span class="sheet-dot"></span></label>
+    			    <input type="text" name="attr_ploadname" value="" class="sheet-load-name" placeholder="Item name" />
+    			</div>
+			    <input type="hidden" name="attr_pload" value="0" />
+			</fieldset>
+			<fieldset class="repeating_items">
+			    <input type="hidden" name="attr_loaddots" />
+			    <label><input type="checkbox" class="sheet-selectable" name="attr_load1" value="1" /><span class="sheet-dot"></span></label>
+			    <label><input type="checkbox" class="sheet-selectable" name="attr_load2" value="1" /><span class="sheet-dot"></span></label>
+			    <label><input type="checkbox" class="sheet-selectable" name="attr_load3" value="1" /><span class="sheet-dot"></span></label>
+			    <input type="text" name="attr_loadname" value="" class="sheet-load-name" placeholder="Item name" />
+			    <input type="hidden" name="attr_load" value="0" />
+			</fieldset>
 			<h3>Friends</h3>
 			<fieldset class="repeating_friends">
 				<div class="sheet-friend">
 					<label><input type="radio" class="sheet-selectable" name="attr_friend" value="friend" /><i class="sheet-arrow-up"></i></label>
 					<label><input type="radio" class="sheet-selectable" name="attr_friend" value="rival" /><i class="sheet-arrow-down"></i></label>
+					<label><input type="radio" class="sheet-selectable" name="attr_friend" value="neutral" checked /><i class="sheet-shrug"></i></label>
 					<input type="text" name="attr_friend_name" placeholder="Foo, a Bar" />
 				</div>
 			</fieldset>
@@ -79,104 +77,119 @@
 		<div class="sheet-actions">
 		    <h3>
                 Insight
+                <input type="hidden" disabled="true" name="attr_insight" value="@{hack1}+@{hunt1}+@{read1}+@{scrounge1}" />
                 <span>XP <input type="number" name="attr_insight_xp" value="0" max="6" min="0" /></span>
             </h3>
 			<ul>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hack[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hack4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Hack</b>
+					<input type="hidden" name="attr_hack" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_hunt4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Hunt</b>
+					<input type="hidden" name="attr_hunt" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_read[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_read4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Read</b>
+					<input type="hidden" name="attr_read" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_scrounge4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Scrounge</b>
+					<input type="hidden" name="attr_scrounge" value="0" />
 				</li>
 			</ul>
 			<h3>
                 Prowess
+                <input type="hidden" disabled="true" name="attr_prowess" value="@{finesse1}+@{prowl1}+@{raid1}+@{wreck1}" />
                 <span>XP <input type="number" name="attr_prowess_xp" value="0" max="6" min="0" /></span>
             </h3>
 			<ul>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_finesse4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Finesse</b>
+					<input type="hidden" name="attr_finesse" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_prowl4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Prowl</b>
+					<input type="hidden" name="attr_prowl" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_raid[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_raid4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Raid</b>
+					<input type="hidden" name="attr_raid" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_wreck4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Wreck</b>
+					<input type="hidden" name="attr_wreck" value="0" />
 				</li>
 			</ul>
 			<h3>
                 Resolve
+                <input type="hidden" disabled="true" name="attr_resolve" value="@{barter1}+@{boss1}+@{sway1}+@{trek1}" />
                 <span>XP <input type="number" name="attr_resolve_xp" value="0" max="6" min="0" /></span>
             </h3>
 			<ul>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_barter[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_barter4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Barter</b>
+					<input type="hidden" name="attr_barter" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_boss[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_boss4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Boss</b>
+					<input type="hidden" name="attr_boss" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_sway[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_sway4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Sway</b>
+					<input type="hidden" name="attr_sway" value="0" />
 				</li>
 				<li>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
-					<label><input type="checkbox" class="sheet-selectable" name="attr_trek[]" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek1" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek2" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek3" value="1" /><span class="sheet-dot"></span></label>
+					<label><input type="checkbox" class="sheet-selectable" name="attr_trek4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Trek</b>
+					<input type="hidden" name="attr_trek" value="0" />
 				</li>
 			</ul>
 			<h3>Bonus Die +1d</h3>
@@ -199,15 +212,16 @@
 		<div class="sheet-stress">
 		    <h3>Stress</h3>
 		    <div class="sheet-stress-dots">
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress[]" value="1" /><i class="sheet-dot"></i></label>
+		        <input type="hidden" name="attr_stress" value="" />
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress1" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress2" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress3" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress4" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress5" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress6" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress7" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress8" value="1" /><i class="sheet-dot"></i></label>
+    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress9" value="1" /><i class="sheet-dot"></i></label>
 		    </div>
 		</div>
 		<div class="sheet-trauma">
@@ -252,7 +266,6 @@
 		                <option value="8">8</option>
 		                <option value="12">12</option>
 		            </select>
-		            <div class="sheet-clock-progress-container"><div class="sheet-clock-progress"></div></div>
 		        </div>
 		    </fieldset>
 		</div>
@@ -274,49 +287,197 @@
 </div>
 
 <script type="text/worker">
-console.log("WORKERS UNITE");
+// naming schema for actions/stress/etc input fields with field name attr_foobar:
+// attr_foobar1 attr_foobar2 ... attr_foobarN
+// one input hidden name=attr_foobar to hold the summed values from foobar1 through N
+// add item to allTotals array: 'foobar':N and init() will figure out the event listeners
 
-on("change:repeating_clocks:clock_ticks change:repeating_clocks:clock_filled", function(eventInfo) {
-    console.log('eventInfo', eventInfo);
-    console.log('what is THIS', this);
-    getAttrs(["repeating_clocks_clock_filled", "repeating_clocks_clock_ticks"], function(vals) {
-       console.log('values for onChange', vals);
-       // set div width to percentage
-       var clockPercentage = parseInt(vals.repeating_clocks_clock_filled) / parseInt(vals.repeating_clocks_clock_ticks);
-       console.log('clockPercentage', clockPercentage);
-       
-    });
-    getSectionIDs("repeating_clocks", function(idarray) {
-        console.log('section IDs', idarray);
-    });
-    setAttrs({
-        repeating_clocks_clock_filled:vals.repeating_clocks_clock_filled
+var eventParams = [
+    {'name': 'hack', dots: 4},
+    {'name': 'hunt', dots: 4},
+    {'name': 'read', dots: 4},
+    {'name': 'scrounge', dots: 4},
+    {'name': 'finesse', dots: 4},
+    {'name': 'prowl', dots: 4},
+    {'name': 'raid', dots: 4},
+    {'name': 'wreck', dots: 4},
+    {'name': 'barter', dots: 4},
+    {'name': 'boss', dots: 4},
+    {'name': 'sway', dots: 4},
+    {'name': 'trek', dots: 4},
+    {'name': 'stress', dots: 9}
+];
+
+var playbookItems = {
+    'driver':[
+        {'ploadname':'Fine anti-vehicle weapon', 'ploaddots':2},
+        {'ploadname':'Fine custom ride', 'ploaddots':0},
+        {'ploadname':'Speed chems', 'ploaddots':0},
+        {'ploadname':'Night goggles', 'ploaddots':1},
+        {'ploadname':'Ammo for AV weapon', 'ploaddots':2},
+        {'ploadname':'Bottle of nitro', 'ploaddots':1},
+    ],
+    'feral':[
+        {'ploadname':'Fine exotic weapon', 'ploaddots':1},
+        {'ploadname':'Fine animal companion', 'ploaddots':0},
+        {'ploadname':'Booby traps', 'ploaddots':2},
+        {'ploadname':'Smoke bomb', 'ploaddots':1},
+        {'ploadname':'Survival kit', 'ploaddots':2},
+        {'ploadname':'Ghillie suit/camouflage', 'ploaddots':1},
+    ],
+    'junker':[
+        {'ploadname':'Fine electronics kit', 'ploaddots':1},
+        {'ploadname':'Fine machinist\'s tools', 'ploaddots':1},
+        {'ploadname':'Keycards', 'ploaddots':0},
+        {'ploadname':'Jalopy', 'ploaddots':0},
+        {'ploadname':'Gadgets', 'ploaddots':3},
+        {'ploadname':'Vial of botdust', 'ploaddots':0},
+    ],
+    'leftover':[
+        {'ploadname':'Fine energy weapon', 'ploaddots':1},
+        {'ploadname':'Fine hand terminal', 'ploaddots':0},
+        {'ploadname':'Medical kit', 'ploaddots':1},
+        {'ploadname':'Motion tracker', 'ploaddots':1},
+        {'ploadname':'Rad suit', 'ploaddots':1},
+        {'ploadname':'Bodytank', 'ploaddots':3},
+    ],
+    'mutant':[
+        {'ploadname':'Fine natural weapons', 'ploaddots':0},
+        {'ploadname':'Fine boneyard maps', 'ploaddots':1},
+        {'ploadname':'Fine concealing clothes', 'ploaddots':0},
+        {'ploadname':'Irradiated energy shots', 'ploaddots':2},
+        {'ploadname':'EMP grenade', 'ploaddots':1},
+        {'ploadname':'Dose of anti-rads', 'ploaddots':0},
+    ],
+    'reaper':[
+        {'ploadname':'Fine hand weapon', 'ploaddots':1},
+        {'ploadname':'Fine heavy weapon', 'ploaddots':2},
+        {'ploadname':'Combat drugs', 'ploaddots':0},
+        {'ploadname':'Armor-piercing ammo', 'ploaddots':1},
+        {'ploadname':'Concealable vest', 'ploaddots':1},
+        {'ploadname':'Explosive charge', 'ploaddots':1},
+    ],
+    'shark':[
+        {'ploadname':'Fine pre-war booze', 'ploaddots':1},
+        {'ploadname':'Fine lockpicks', 'ploaddots':0},
+        {'ploadname':'Party drugs', 'ploaddots':0},
+        {'ploadname':'Concealable derringer', 'ploaddots':0},
+        {'ploadname':'Pepper spray', 'ploaddots':0},
+        {'ploadname':'Impressive but useless trinkets', 'ploaddots':1},
+    ]
+};
+
+on("change:playbook", function(eventInfo) {
+   getAttrs(['playbook'], function(vals) {
+        setItems(vals.playbook.toLowerCase());
+   });
+});
+
+// load calc
+on("sheet:opened change:repeating_playbookitems", function(eventInfo) {
+    console.log('eventInfo on playbook items change', eventInfo);
+    setLoad();
+    //setAttrs({'repeating_playbookitems_playbook_load':7});
+});
+
+eventParams.forEach(function(component) {
+    let changeStr = "sheet:opened";
+    for(let i = 1; i <= component.dots; i++) {
+        changeStr = changeStr + " change:" + component.name + i;
+    }
+    on(changeStr, function(eventInfo) {
+        setTotal(component.name, component.dots);
     });
 });
-</script>
-<script>
 
-	// set up event bindings
-	for (var i = 0; i < document.getElementsByName('attr_items[]').length; i++) {
-		document.getElementsByName('attr_items[]')[i].addEventListener("click", function() {
-			calcLoad(document.getElementsByName('attr_items[]'));
-		});
-	}
-	//for (var i=0;i<itemz.length;i++){if (itemz[i].checked) {load = load + parseInt(itemz[i].value);}}
-	var calcLoad = function(items) {
-		var load = 0;
-		for (var i = 0; i < items.length; i++) {
-			if (items[i].checked) {
-				load = load + parseInt(items[i].value);
-			}
-		}
-		console.log('Current load is ' + load);
-		var upkeep = 'light';
-		if (load > 5) {
-			upkeep = 'heavy';
-		} else if (load > 2) {
-			upkeep = 'medium';
-		}
-		document.getElementsByClassName('sheet-load-total')[0].innerHTML = load + ' ' + upkeep;
-	}
+// generic function to total up field1, field2 ... fieldmax and assign to attr_field value
+var setTotal = function(field, max) {
+    var fields = [];
+    for (var i = 1; i <= max; i++) {
+        fields.push(field + i);
+    }
+    getAttrs(fields, function(vals) {
+       console.log(field + ' vals', vals);
+       var total = 0;
+       for (dot in vals) {
+           total = total + parseInt(vals[dot]);
+       }
+       var setting = {};
+       setting[field] = total;
+       setAttrs(setting, {}, function() {
+            console.log('setting ' + field + ' to ' + total);
+            getAttrs([field], function(vals) {
+               console.log('field total result', vals);
+            });
+       });
+    });
+};
+
+var getActionName = function(name) {
+  console.log('getActionName', name);
+  return name.slice(0, -1); // take off numeric suffix
+};
+
+var setLoad = function() {
+    console.log('setLoad');
+    getSectionIDs("repeating_playbookitems", function(sectionIDs) {
+        // first we set load per item
+        console.log('getSectionIDs', sectionIDs);
+        var totalLoad = 0;
+        var loadLevel = 'light';
+        _.each(sectionIDs, function(sectionID, i) {
+            console.log('sectionID', sectionID, i);
+            getAttrs([
+                'repeating_playbookitems_' + sectionID + '_pload1',
+                'repeating_playbookitems_' + sectionID + '_pload2',
+                'repeating_playbookitems_' + sectionID + '_pload3'
+                ], function(vals) {
+                var sum = Object.values(vals).reduce((a, b) => parseInt(a) + parseInt(b), 0);
+                totalLoad = parseInt(totalLoad) + parseInt(sum);
+                if (totalLoad > 5) {
+                    loadLevel = 'heavy';
+                } else if (totalLoad > 3) {
+                    loadLevel = 'medium';
+                }
+                let myLoad = 'repeating_playbookitems_'+sectionID+'_pload';
+                setAttrs({
+                   [myLoad]:sum,
+                   'loadtotal':totalLoad,
+                   'loadtitle':loadLevel
+                });
+            });
+        });
+    });
+}
+
+var setItems = function(playbook) {
+    console.log('Clearing old items');
+    getSectionIDs("repeating_playbookitems", function(sectionIDs) {
+        _.each(sectionIDs, function(sectionID, i) {
+            removeRepeatingRow("repeating_playbookitems_" + sectionID);
+        });
+    });
+    var data = playbookItems[playbook];
+    console.log('Getting playbook data', data);
+    console.log('Testing new row creation');
+    var newRows = {};
+    _.each(data, function(item) {
+        let itemID = generateRowID();
+        console.log('attempting to add ' + itemID, item);
+        for (prop in item) {
+            newRows['repeating_playbookitems_' + itemID + '_' + prop] = item[prop];
+        }
+    });
+    console.log('Should be adding', newRows);
+    setAttrs(newRows);
+    /*
+    newRow['repeating_playbookitems_' + newRowID + '_ploadname'] = 'Fine AV Weapon';
+    newRow['repeating_playbookitems_' + newRowID + '_ploaddots'] = 2;
+    newRow['repeating_playbookitems_' + newRowID + '_pload1'] = 1;
+    newRow['repeating_playbookitems_' + newRowID + '_pload2'] = 2;
+    console.log('our new row is', newRow);
+    setAttrs(newRow);
+    */
+}
+
 </script>
