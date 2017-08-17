@@ -237,6 +237,10 @@ fieldset {
     padding: 0;
 }
 
+.sheet-load-name {
+    width: 65%;
+}
+
 .sheet-actions h3, .sheet-supplies p {
     display: flex;
     justify-content: space-between;
@@ -247,7 +251,7 @@ fieldset {
     margin-top: .25em;
 }
 .sheet-friend input {
-    width: 75%;
+    width: 70%;
 }
 .sheet-stress-dots {
     display:flex;
@@ -286,17 +290,6 @@ textarea[name=attr_notes] {
 }
 div.sheet-clock {
     margin: .25em 0;
-}
-.sheet-clock-progress {
-    height: .5em;
-    width: 33%;
-    background: #3c3;
-}
-.sheet-clock-progress-container {
-    background: #999;
-}
-.sheet-clock input[type=number][value="4"] ~.sheet-clock-progress-container > .sheet-clock-progress {
-  background:red;
 }
 
 /*Selectables*/
@@ -366,6 +359,16 @@ select {
     margin: .25em;
     cursor: pointer;
 }
+.sheet-shrug {
+    border: solid black;
+    border-width: 3px 0 0 0;
+    display: inline-block;
+    padding: .25em;
+    margin: .25em;
+    cursor: pointer;
+    position:relative;
+    top:.4em;
+}
 
 label input:checked+i {
     border-color: #3c3;
@@ -379,5 +382,18 @@ label input:checked+i {
 .sheet-arrow-down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+}
+
+input[name='attr_ploaddots'][value="3"] + .sheet-playbookitem label:nth-child(n+4),
+input[name='attr_ploaddots'][value="2"] + .sheet-playbookitem label:nth-child(n+3),
+input[name='attr_ploaddots'][value="1"] + .sheet-playbookitem label:nth-child(n+2) {
+    display: none;
+}
+/* hide all load dots but the zero-value one (for italic items) */
+input[name='attr_ploaddots'][value="0"] + .sheet-playbookitem label:nth-child(-n+3) {
+    display: none;
+}
+input[name='attr_ploaddots'][value="0"] + .sheet-playbookitem input[name="attr_ploadname"] {
+    font-style: italic;
 }
 
