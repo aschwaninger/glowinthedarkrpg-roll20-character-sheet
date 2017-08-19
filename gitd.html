@@ -4,48 +4,138 @@
 	<div class="sheet-header">
 		<h1 class="sheet-logo">Glow in the Dark</h1>
 		<h1 class="sheet-playbook"><input type="text" name="attr_playbook" placeholder="Playbook" /></h1>
-		<h2>Smarmy subtitle<br/>Second line</h2>
+		<h2><span name="attr_subtitle1"></span><span name="attr_subtitle2"></span></h2>
 	</div>
-
 	<div class="sheet-columns">
-		<!-- Bio -->
-		<div class="sheet-bio">
-			<p>
-				<input type="text" name="attr_name" value="" />
-				<b>Name</b>
-			</p>
-			<p>
-				<input type="text" name="attr_look" value="" />
-				<b>Look</b>
-			</p>
-			<p>
-				<input type="text" name="attr_bg" value="" />
-				<b>Background:</b>
-				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="1" /><span>On the Run</span></label>
-				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="2" /><span>Vengeance</span></label>
-				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="3" /><span>Web of Lies</span></label>
-			</p>
-			<p>
-				<input type="text" name="attr_taboo" value="" />
-				<b>Taboo</b>
-			</p>
-			<p>
-				<input type="text" name="attr_vice" value="" />
-				<b>Vice/Purveyor:</b>
-				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="denial" /><span>Denial</span></label>
-				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="duty" /><span>Duty</span></label>
-				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="faith" /><span>Faith</span></label>
-				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="gambling" /><span>Gambling</span></label>
-				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="luxury" /><span>Luxury</span></label>
-				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="pleasure" /><span>Pleasure</span></label>
-				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="stupor" /><span>Stupor</span></label>
-			</p>
+	    <div class="sheet-column-left">
+	        <!-- Bio -->
+    		<div class="sheet-bio">
+    			<p>
+    				<input type="text" name="attr_name" value="" />
+    				<b>Name</b>
+    			</p>
+    			<p>
+    				<input type="text" name="attr_look" value="" />
+    				<b>Look</b>
+    			</p>
+    			<p>
+    				<input type="text" name="attr_bg" value="" />
+    				<b>Background:</b>
+    				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="1" /><span>On the Run</span></label>
+    				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="2" /><span>Vengeance</span></label>
+    				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="3" /><span>Web of Lies</span></label>
+    			</p>
+    			<p>
+    				<input type="text" name="attr_taboo" value="" />
+    				<b>Taboo</b>
+    			</p>
+    			<p>
+    				<input type="text" name="attr_vice" value="" />
+    				<b>Vice/Purveyor:</b>
+    				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="denial" /><span>Denial</span></label>
+    				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="duty" /><span>Duty</span></label>
+    				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="faith" /><span>Faith</span></label>
+    				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="gambling" /><span>Gambling</span></label>
+    				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="luxury" /><span>Luxury</span></label>
+    				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="pleasure" /><span>Pleasure</span></label>
+    				<label><input type="radio" name="attr_vice_options" class="sheet-selectable" value="stupor" /><span>Stupor</span></label>
+    			</p>
+    		</div>
+    		<div class="sheet-stress-trauma-supplies">
+    		    <div class="sheet-stress">
+        		    <h3>Stress</h3>
+        		    <div class="sheet-stress-dots">
+        		        <input type="hidden" name="attr_stress" value="" />
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress1" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress2" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress3" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress4" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress5" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress6" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress7" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress8" value="1" /><i class="sheet-dot"></i></label>
+            		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress9" value="1" /><i class="sheet-dot"></i></label>
+        		    </div>
+        		</div>
+        		<div class="sheet-trauma">
+        		    <h3>Trauma</h3>
+        		    <fieldset class="repeating_trauma">
+                        <select name="attr_trauma">
+                            <option value="cold">Cold</option>
+                            <option value="obsessed">Obsessed</option>
+                            <option value="reckless">Reckless</option>
+                            <option value="paranoid">Paranoid</option>
+                            <option value="sickened">Sickened</option>
+                            <option value="soft">Soft</option>
+                            <option value="unstable">Unstable</option>
+                            <option value="vicious">Vicious</option>
+                        </select>
+        		    </fieldset>
+        		</div>
+        		<div class="sheet-supplies">
+        		    <h3>
+                        Supplies
+                        <span><input type="number" name="attr_supplies" value="0" max="4" min="0" /></span>
+                    </h3>
+                    <p>
+        				<b>Stash</b> <input type="number" name="attr_stash" value="0" min="0" />
+        			</p>
+        		</div>
+    		</div>
+    		
+    		<div class="sheet-harm">
+    		    <h3>Harm</h3>
+    		    <div class="sheet-harm3"><b>3</b><input type="text" class="sheet-harm3" name="attr_harm3" placeholder="Level 3 Harm" /><b>Need Help</b></div>
+    		    <div class="sheet-harm2"><b>2</b><input type="text" class="sheet-harm2" name="attr_harm2a" placeholder="Level 2 Harm" /><input type="text" class="sheet-harm2" name="attr_harm2b" placeholder="Level 2 Harm" /><b>-1d</b></div>
+    		    <div class="sheet-harm1"><b>1</b><input type="text" class="sheet-harm1" name="attr_harm1a" placeholder="Level 1 Harm" /><input type="text" class="sheet-harm1" name="attr_harm1b" placeholder="Level 1 Harm" /><b>-Effect</b></div>
+    		</div>
+    		<div class="sheet-abilities">
+    		    <h3>Special Abilities</h3>
+    		    <fieldset class="repeating_feats">
+    		        <div class="sheet-feat">
+        		        <select name="attr_featname">
+    		                <optgroup label="Driver">
+    		                    <option value="foo">Foo</option>
+    		                    <option value="bar">Bar</option>
+    		                </optgroup>
+    		                <optgroup label="Feral">
+    		                    <option value="alice">Alice</option>
+    		                    <option value="bob">Bob</option>
+    		                </optgroup>
+    		            </select>
+        		        <span class="sheet-featdesc" name="attr_featdesc"></span>
+                    </div>
+    		    </fieldset>
+    		</div>
+    		<div class="sheet-clocks">
+    		    <h3>Clocks</h3>
+    		    <fieldset class="repeating_clocks">
+    		        <div class="sheet-clock">
+    		            <input type="text" name="attr_clock_name" placeholder="Clock Name" />
+    		            <input type="number" name="attr_clock_filled" value="0" max="12" min="0" /> out of
+    		            <select name="attr_clock_ticks">
+    		                <option value="4">4</option>
+    		                <option value="6">6</option>
+    		                <option value="8">8</option>
+    		                <option value="12">12</option>
+    		            </select>
+    		        </div>
+    		    </fieldset>
+    		</div>
+	    </div> <!-- / left column -->
+		
+		<div class="sheet-xptriggers">
+		    <h3>Playbook Advancement<span>XP <input type="number" name="attr_playbook_xp" value="0" max="8" min="0" /></span></h3>
+		    <div><span>Every time you roll a desperate action, mark XP in that action’s attribute.</span></div>
+            <div><span name="attr_xptrigger">You addressed a challenge with vehicular skill or knowledge.</span></div>
+            <div><span>You expressed your beliefs or background.</span></div>
+            <div><span>Your traumas, vice, or taboo caused a problem.</span></div>
 		</div>
 		<!-- Load/friends -->
 		<div class="sheet-load">
 			<h3>Load: <span name="attr_loadtotal">0</span> <span name="attr_loadtitle">light</span></h3>
 			<fieldset class="repeating_playbookitems">
-			    <input type="hidden" name="attr_ploaddots" />
+			    <input type="hidden" name="attr_ploaddots" value="3" />
 			    <div class="sheet-playbookitem">
     			    <label><input type="checkbox" class="sheet-selectable" name="attr_pload1" value="1" /><span class="sheet-dot"></span></label>
     			    <label><input type="checkbox" class="sheet-selectable" name="attr_pload2" value="1" /><span class="sheet-dot"></span></label>
@@ -54,14 +144,6 @@
     			    <input type="text" name="attr_ploadname" value="" class="sheet-load-name" placeholder="Item name" />
     			</div>
 			    <input type="hidden" name="attr_pload" value="0" />
-			</fieldset>
-			<fieldset class="repeating_items">
-			    <input type="hidden" name="attr_loaddots" />
-			    <label><input type="checkbox" class="sheet-selectable" name="attr_load1" value="1" /><span class="sheet-dot"></span></label>
-			    <label><input type="checkbox" class="sheet-selectable" name="attr_load2" value="1" /><span class="sheet-dot"></span></label>
-			    <label><input type="checkbox" class="sheet-selectable" name="attr_load3" value="1" /><span class="sheet-dot"></span></label>
-			    <input type="text" name="attr_loadname" value="" class="sheet-load-name" placeholder="Item name" />
-			    <input type="hidden" name="attr_load" value="0" />
 			</fieldset>
 			<h3>Friends</h3>
 			<fieldset class="repeating_friends">
@@ -209,66 +291,7 @@
             <h3>Gather Information</h3>
             <p>What do they intend to do? - How can I get them to X? - What are they really feeling? - What should I be worried about? - Where’s the weakness here? - How can I find X? - What’s really going on here? - Ask about a detail for a plan.</p>
 		</div>
-		<div class="sheet-stress">
-		    <h3>Stress</h3>
-		    <div class="sheet-stress-dots">
-		        <input type="hidden" name="attr_stress" value="" />
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress1" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress2" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress3" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress4" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress5" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress6" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress7" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress8" value="1" /><i class="sheet-dot"></i></label>
-    		    <label><input type="checkbox" class="sheet-selectable" name="attr_stress9" value="1" /><i class="sheet-dot"></i></label>
-		    </div>
-		</div>
-		<div class="sheet-trauma">
-		    <h3>Trauma</h3>
-		    <fieldset class="repeating_trauma">
-                <select name="attr_trauma">
-                    <option value="cold">Cold</option>
-                    <option value="obsessed">Obsessed</option>
-                    <option value="reckless">Reckless</option>
-                    <option value="paranoid">Paranoid</option>
-                    <option value="sickened">Sickened</option>
-                    <option value="soft">Soft</option>
-                    <option value="unstable">Unstable</option>
-                    <option value="vicious">Vicious</option>
-                </select>
-		    </fieldset>
-		</div>
-		<div class="sheet-supplies">
-		    <h3>
-                Supplies
-                <span><input type="number" name="attr_supplies" value="0" max="4" min="0" /></span>
-            </h3>
-            <p>
-				<b>Stash</b> <input type="number" name="attr_stash" value="0" min="0" />
-			</p>
-		</div>
-		<div class="sheet-harm">
-		    <h3>Harm</h3>
-		    <div class="sheet-harm3"><b>3</b><input type="text" class="sheet-harm3" name="attr_harm3" placeholder="Level 3 Harm" /><b>Need Help</b></div>
-		    <div class="sheet-harm2"><b>2</b><input type="text" class="sheet-harm2" name="attr_harm2a" placeholder="Level 2 Harm" /><input type="text" class="sheet-harm2" name="attr_harm2b" placeholder="Level 2 Harm" /><b>-1d</b></div>
-		    <div class="sheet-harm1"><b>1</b><input type="text" class="sheet-harm1" name="attr_harm1a" placeholder="Level 1 Harm" /><input type="text" class="sheet-harm1" name="attr_harm1b" placeholder="Level 1 Harm" /><b>-Effect</b></div>
-		</div>
-		<div class="sheet-clocks">
-		    <h3>Clocks</h3>
-		    <fieldset class="repeating_clocks">
-		        <div class="sheet-clock">
-		            <input type="text" name="attr_clock_name" placeholder="Clock Name" />
-		            <input type="number" name="attr_clock_filled" value="0" max="12" min="0" /> out of
-		            <select name="attr_clock_ticks">
-		                <option value="4">4</option>
-		                <option value="6">6</option>
-		                <option value="8">8</option>
-		                <option value="12">12</option>
-		            </select>
-		        </div>
-		    </fieldset>
-		</div>
+		
 		<div class="sheet-notes">
 		    <h3>Notes</h3>
 		    <textarea name="attr_notes"></textarea>
@@ -309,67 +332,125 @@ var eventParams = [
 ];
 
 var playbookItems = {
-    'driver':[
-        {'ploadname':'Fine anti-vehicle weapon', 'ploaddots':2},
-        {'ploadname':'Fine custom ride', 'ploaddots':0},
-        {'ploadname':'Speed chems', 'ploaddots':0},
-        {'ploadname':'Night goggles', 'ploaddots':1},
-        {'ploadname':'Ammo for AV weapon', 'ploaddots':2},
-        {'ploadname':'Bottle of nitro', 'ploaddots':1},
-    ],
-    'feral':[
-        {'ploadname':'Fine exotic weapon', 'ploaddots':1},
-        {'ploadname':'Fine animal companion', 'ploaddots':0},
-        {'ploadname':'Booby traps', 'ploaddots':2},
-        {'ploadname':'Smoke bomb', 'ploaddots':1},
-        {'ploadname':'Survival kit', 'ploaddots':2},
-        {'ploadname':'Ghillie suit/camouflage', 'ploaddots':1},
-    ],
-    'junker':[
-        {'ploadname':'Fine electronics kit', 'ploaddots':1},
-        {'ploadname':'Fine machinist\'s tools', 'ploaddots':1},
-        {'ploadname':'Keycards', 'ploaddots':0},
-        {'ploadname':'Jalopy', 'ploaddots':0},
-        {'ploadname':'Gadgets', 'ploaddots':3},
-        {'ploadname':'Vial of botdust', 'ploaddots':0},
-    ],
-    'leftover':[
-        {'ploadname':'Fine energy weapon', 'ploaddots':1},
-        {'ploadname':'Fine hand terminal', 'ploaddots':0},
-        {'ploadname':'Medical kit', 'ploaddots':1},
-        {'ploadname':'Motion tracker', 'ploaddots':1},
-        {'ploadname':'Rad suit', 'ploaddots':1},
-        {'ploadname':'Bodytank', 'ploaddots':3},
-    ],
-    'mutant':[
-        {'ploadname':'Fine natural weapons', 'ploaddots':0},
-        {'ploadname':'Fine boneyard maps', 'ploaddots':1},
-        {'ploadname':'Fine concealing clothes', 'ploaddots':0},
-        {'ploadname':'Irradiated energy shots', 'ploaddots':2},
-        {'ploadname':'EMP grenade', 'ploaddots':1},
-        {'ploadname':'Dose of anti-rads', 'ploaddots':0},
-    ],
-    'reaper':[
-        {'ploadname':'Fine hand weapon', 'ploaddots':1},
-        {'ploadname':'Fine heavy weapon', 'ploaddots':2},
-        {'ploadname':'Combat drugs', 'ploaddots':0},
-        {'ploadname':'Armor-piercing ammo', 'ploaddots':1},
-        {'ploadname':'Concealable vest', 'ploaddots':1},
-        {'ploadname':'Explosive charge', 'ploaddots':1},
-    ],
-    'shark':[
-        {'ploadname':'Fine pre-war booze', 'ploaddots':1},
-        {'ploadname':'Fine lockpicks', 'ploaddots':0},
-        {'ploadname':'Party drugs', 'ploaddots':0},
-        {'ploadname':'Concealable derringer', 'ploaddots':0},
-        {'ploadname':'Pepper spray', 'ploaddots':0},
-        {'ploadname':'Impressive but useless trinkets', 'ploaddots':1},
-    ]
+    'driver':{
+        'subtitle1':'Nerves of steel',
+        'subtitle2':'Master of the wheel',
+        'xptrigger':'You addressed a challenge with vehicular skill or knowledge.',
+        'items':[
+            {'ploadname':'Fine anti-vehicle weapon', 'ploaddots':2},
+            {'ploadname':'Fine custom ride', 'ploaddots':0},
+            {'ploadname':'Speed chems', 'ploaddots':0},
+            {'ploadname':'Night goggles', 'ploaddots':1},
+            {'ploadname':'Ammo for AV weapon', 'ploaddots':2},
+            {'ploadname':'Bottle of nitro', 'ploaddots':1},
+        ]
+    },
+    'feral':{
+        'subtitle1':'The tools of old broke the world',
+        'subtitle2':'All you need to survive is you',
+        'xptrigger':'You addressed a challenge with stealth or survival skills.',
+        'items':[
+            {'ploadname':'Fine exotic weapon', 'ploaddots':1},
+            {'ploadname':'Fine animal companion', 'ploaddots':0},
+            {'ploadname':'Booby traps', 'ploaddots':2},
+            {'ploadname':'Smoke bomb', 'ploaddots':1},
+            {'ploadname':'Survival kit', 'ploaddots':2},
+            {'ploadname':'Ghillie suit/camouflage', 'ploaddots':1},
+        ]
+    },
+    'junker':{
+        'subtitle1':'This one goes here',
+        'subtitle2':'That one goes there',
+        'xptrigger':'You addressed a challenge with technical expertise or mayhem.',
+        'items':[
+            {'ploadname':'Fine electronics kit', 'ploaddots':1},
+            {'ploadname':'Fine machinist\'s tools', 'ploaddots':1},
+            {'ploadname':'Keycards', 'ploaddots':0},
+            {'ploadname':'Jalopy', 'ploaddots':0},
+            {'ploadname':'Gadgets', 'ploaddots':3},
+            {'ploadname':'Vial of botdust', 'ploaddots':0},
+        ]
+    },
+    'leftover':{
+        'subtitle1':'Only you can see how far',
+        'subtitle2':'the world has fallen',
+        'xptrigger':'You addressed a challenge with pre-war knowledge or tech.',
+        'items':[
+            {'ploadname':'Fine energy weapon', 'ploaddots':1},
+            {'ploadname':'Fine hand terminal', 'ploaddots':0},
+            {'ploadname':'Medical kit', 'ploaddots':1},
+            {'ploadname':'Motion tracker', 'ploaddots':1},
+            {'ploadname':'Rad suit', 'ploaddots':1},
+            {'ploadname':'Bodytank', 'ploaddots':3},
+        ]
+    },
+    'mutant':{
+        'subtitle1':'Humanity had its chance',
+        'subtitle2':'You are part of the new world',
+        'xptrigger':'You addressed a challenge with mutated strangeness or superiority.',
+        'items':[
+            {'ploadname':'Fine natural weapons', 'ploaddots':0},
+            {'ploadname':'Fine boneyard maps', 'ploaddots':1},
+            {'ploadname':'Fine concealing clothes', 'ploaddots':0},
+            {'ploadname':'Irradiated energy shots', 'ploaddots':2},
+            {'ploadname':'EMP grenade', 'ploaddots':1},
+            {'ploadname':'Dose of anti-rads', 'ploaddots':0},
+        ]
+    },
+    'reaper':{
+        'subtitle1':'The strong survive',
+        'subtitle2':'You plan on surviving',
+        'xptrigger':'You addressed a challenge with violence or threats.',
+        'items':[
+            {'ploadname':'Fine hand weapon', 'ploaddots':1},
+            {'ploadname':'Fine heavy weapon', 'ploaddots':2},
+            {'ploadname':'Combat drugs', 'ploaddots':0},
+            {'ploadname':'Armor-piercing ammo', 'ploaddots':1},
+            {'ploadname':'Concealable vest', 'ploaddots':1},
+            {'ploadname':'Explosive charge', 'ploaddots':1},
+        ]
+    },
+    'shark':{
+        'subtitle1':'You never break deals',
+        'subtitle2':'You just bend them',
+        'xptrigger':'You addressed a challenge with deception or negotiation.',
+        'items':[
+            {'ploadname':'Fine pre-war booze', 'ploaddots':1},
+            {'ploadname':'Fine lockpicks', 'ploaddots':0},
+            {'ploadname':'Party drugs', 'ploaddots':0},
+            {'ploadname':'Concealable derringer', 'ploaddots':0},
+            {'ploadname':'Pepper spray', 'ploaddots':0},
+            {'ploadname':'Impressive but useless trinkets', 'ploaddots':1},
+        ]
+    },
+    'default':{
+        'items':[
+            {'ploadname':'Primitive hand weapon', 'ploaddots':0},
+            {'ploadname':'+Big', 'ploaddots':1},
+            {'ploadname':'+More', 'ploaddots':2},
+            {'ploadname':'Ballistic weapon', 'ploaddots':1},
+            {'ploadname':'+Big', 'ploaddots':1},
+            {'ploadname':'+More', 'ploaddots':2},
+            {'ploadname':'Exotic weapon', 'ploaddots':1},
+            {'ploadname':'Ammo', 'ploaddots':2},
+            {'ploadname':'Molotov', 'ploaddots':1},
+            {'ploadname':'Frag', 'ploaddots':1},
+            {'ploadname':'Armor', 'ploaddots':1},
+            {'ploadname':'+Heavy', 'ploaddots':2},
+            {'ploadname':'Toolkit', 'ploaddots':1},
+            {'ploadname':'Radio', 'ploaddots':1},
+            {'ploadname':'Climbing gear', 'ploaddots':2},
+            {'ploadname':'Camping gear', 'ploaddots':2}
+        ]
+    }
 };
 
 on("change:playbook", function(eventInfo) {
    getAttrs(['playbook'], function(vals) {
+        // TODO only run if playbook matches playbook choices
         setItems(vals.playbook.toLowerCase());
+        setSubtitle(vals.playbook.toLowerCase());
+        setXP(vals.playbook.toLowerCase());
    });
 });
 
@@ -457,7 +538,7 @@ var setItems = function(playbook) {
             removeRepeatingRow("repeating_playbookitems_" + sectionID);
         });
     });
-    var data = playbookItems[playbook];
+    var data = playbookItems[playbook].items.concat(playbookItems['default'].items);
     console.log('Getting playbook data', data);
     console.log('Testing new row creation');
     var newRows = {};
@@ -470,14 +551,20 @@ var setItems = function(playbook) {
     });
     console.log('Should be adding', newRows);
     setAttrs(newRows);
-    /*
-    newRow['repeating_playbookitems_' + newRowID + '_ploadname'] = 'Fine AV Weapon';
-    newRow['repeating_playbookitems_' + newRowID + '_ploaddots'] = 2;
-    newRow['repeating_playbookitems_' + newRowID + '_pload1'] = 1;
-    newRow['repeating_playbookitems_' + newRowID + '_pload2'] = 2;
-    console.log('our new row is', newRow);
-    setAttrs(newRow);
-    */
+}
+
+var setSubtitle = function(playbook) {
+    let newSubtitle = {};
+    newSubtitle['subtitle1'] = playbookItems[playbook].subtitle1;
+    newSubtitle['subtitle2'] = playbookItems[playbook].subtitle2;
+    console.log('setting subtitle to ', newSubtitle);
+    setAttrs(newSubtitle);
+}
+
+var setXP = function(playbook) {
+    let newTrigger = {};
+    newTrigger['xptrigger'] = playbookItems[playbook].xptrigger;
+    setAttrs(newTrigger);
 }
 
 </script>
