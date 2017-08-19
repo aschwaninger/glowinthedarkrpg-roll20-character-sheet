@@ -173,6 +173,9 @@ b {
 input[type=text], textarea {
     font-family: cursive;
 }
+input[name=attr_friend_name], input[name=attr_ploadname] {
+    font-family: Quicksand, sans-serif;
+}
 
 
 /*Structure*/
@@ -194,11 +197,21 @@ input:checked+label+.sheet-tab {
     flex-wrap: nowrap;
     align-items: center;
 }
+.sheet-header h2 span {
+    display: block;
+}
 
 
 .sheet-columns > * {
     padding: .5em;
     float: left;
+}
+.sheet-column-left {
+    width: 50%;
+}
+.sheet-stress-trauma-supplies {
+    display: flex;
+    justify-content: space-between;
 }
 
 fieldset {
@@ -210,7 +223,8 @@ fieldset {
 .sheet-bio {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    margin: .5em 0;
 }
 
 .sheet-bio input {
@@ -241,7 +255,7 @@ fieldset {
     width: 65%;
 }
 
-.sheet-actions h3, .sheet-supplies p {
+.sheet-actions h3, .sheet-supplies p, .sheet-xptriggers h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -261,6 +275,7 @@ fieldset {
 div.sheet-harm {
     display:flex;
     flex-direction:column;
+    width: 100%;
 }
 div.sheet-harm input {
     width: 35%;
@@ -290,6 +305,9 @@ textarea[name=attr_notes] {
 }
 div.sheet-clock {
     margin: .25em 0;
+}
+.sheet-xptriggers div span {
+    font-style: italic;
 }
 
 /*Selectables*/
