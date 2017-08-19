@@ -27,7 +27,15 @@
     			</p>
     			<p>
     				<input type="text" name="attr_taboo" value="" />
-    				<b>Taboo</b>
+    				<b>Taboo:</b>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="barbarism" /><span>Barbarism</span></label>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="cannibalism" /><span>Cannibalism</span></label>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="murder" /><span>Murder</span></label>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="oathbreaking" /><span>Oathbreaking</span></label>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="slavery" /><span>Slavery</span></label>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="squandering" /><span>Squandering</span></label>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="torture" /><span>Torture</span></label>
+    				<label><input type="radio" name="attr_taboo_options" class="sheet-selectable" value="witholding" /><span>Withholding Aid</span></label>
     			</p>
     			<p>
     				<input type="text" name="attr_vice" value="" />
@@ -94,13 +102,76 @@
     		    <fieldset class="repeating_feats">
     		        <div class="sheet-feat">
         		        <select name="attr_featname">
+        		            <option value="">Choose Ability:</option>
     		                <optgroup label="Driver">
-    		                    <option value="foo">Foo</option>
-    		                    <option value="bar">Bar</option>
+    		                    <option value="Need for Speed">Need for Speed</option>
+    		                    <option value="Witness Me">Witness Me</option>
+    		                    <option value="Maximum Overdrive">Maximum Overdrive</option>
+    		                    <option value="Fast and Furious">Fast and Furious</option>
+    		                    <option value="Tank Girl">Tank Girl</option>
+    		                    <option value="Beat the Snake">Beat the Snake</option>
+    		                    <option value="Eleanor">Eleanor</option>
+    		                    <option value="Shiny and Chrome">Shiny and Chrome</option>
     		                </optgroup>
     		                <optgroup label="Feral">
-    		                    <option value="alice">Alice</option>
-    		                    <option value="bob">Bob</option>
+    		                    <option value="Beastmaster">Beastmaster</option>
+    		                    <option value="Ghost and the Darkness">Ghost and the Darkness</option>
+    		                    <option value="Shadow">Shadow</option>
+    		                    <option value="Predator">Predator</option>
+    		                    <option value="Snake Eater">Snake Eater</option>
+    		                    <option value="Hunter’s Quarry">Hunter’s Quarry</option>
+    		                    <option value="Good Dog">Good Dog</option>
+    		                    <option value="Brave New World">Brave New World</option>
+    		                </optgroup>
+    		                <optgroup label="Junker">
+    		                    <option value="Blackfinger">Blackfinger</option>
+    		                    <option value="Percussive Maintenance">Percussive Maintenance</option>
+    		                    <option value="Organic Mechanic">Organic Mechanic</option>
+    		                    <option value="Mechromancer">Mechromancer</option>
+    		                    <option value="Boom Shakalaka">Boom Shakalaka</option>
+    		                    <option value="Buried Treasure">Buried Treasure</option>
+    		                    <option value="Junk of All Trades">Junk of All Trades</option>
+    		                    <option value="Blood, Sweat, and Gears">Blood, Sweat, and Gears</option>
+    		                </optgroup>
+    		                <optgroup label="Leftover">
+    		                    <option value="History Buff">History Buff</option>
+    		                    <option value="Trusted User">Trusted User</option>
+    		                    <option value="Wrong Guy, Wrong Place, Wrong Time">Wrong Guy, Wrong Place, Wrong Time</option>
+    		                    <option value="Pearly Whites">Pearly Whites</option>
+    		                    <option value="Listen Up You Primitive Screwheads">Listen Up You Primitive Screwheads</option>
+    		                    <option value="Future Shock">Future Shock</option>
+    		                    <option value="Line in the Sand">Line in the Sand</option>
+    		                    <option value="Doomed to Repeat It">Doomed to Repeat It</option>
+    		                </optgroup>
+    		                <optgroup label="Mutant">
+    		                    <option value="Ghoul">Ghoul</option>
+    		                    <option value="Superhuman">Superhuman</option>
+    		                    <option value="Scanner">Scanner</option>
+    		                    <option value="Wings">Wings</option>
+    		                    <option value="Conduit">Conduit</option>
+    		                    <option value="Venomous">Venomous</option>
+    		                    <option value="Invertebrate">Invertebrate</option>
+    		                    <option value="Lone Wolf">Lone Wolf</option>
+    		                </optgroup>
+    		                <optgroup label="Reaper">
+    		                    <option value="Last One Standing">Last One Standing</option>
+    		                    <option value="Ayatollah of Rock’n’Rolla">Ayatollah of Rock’n’Rolla</option>
+    		                    <option value="Blaze of Glory">Blaze of Glory</option>
+    		                    <option value="Roadkill">Roadkill</option>
+    		                    <option value="Brute Squad">Brute Squad</option>
+    		                    <option value="Walk it Off">Walk it Off</option>
+    		                    <option value="Not Today">Not Today</option>
+    		                    <option value="Life is Cheap">Life is Cheap</option>
+    		                </optgroup>
+    		                <optgroup label="Shark">
+    		                    <option value="Everybody’s Buddy">Everybody’s Buddy</option>
+    		                    <option value="Trust Me">Trust Me</option>
+    		                    <option value="Takes One to Know One">Takes One to Know One</option>
+    		                    <option value="Hoarder">Hoarder</option>
+    		                    <option value="Let’s You and Him Fight">Let’s You and Him Fight</option>
+    		                    <option value="Connected">Connected</option>
+    		                    <option value="Silver Tongue">Silver Tongue</option>
+    		                    <option value="The Radscorpion and the Frog">The Radscorpion and the Frog</option>
     		                </optgroup>
     		            </select>
         		        <span class="sheet-featdesc" name="attr_featdesc"></span>
@@ -445,6 +516,65 @@ var playbookItems = {
     }
 };
 
+var perks = {
+    'Need for Speed':'When you face a challenge using speed and precise driving, you gain +1 effect.',
+    'Witness Me':'When you sacrifice your custom ride in order to accomplish something, say why you’re willing to do that. Pay any additional costs set by the GM and describe how you succeed.',
+    'Maximum Overdrive':'You get +1d when ramming smaller vehicles. If you’re running over pedestrians, your attacks also gain +1 scale.',
+    'Fast and Furious':'You can make your vehicle do things it shouldn’t be able to do. When you make a desperate roll behind the wheel, you get +1d.',
+    'Tank Girl':'You may expend your special armor to resist collisions and crashes, plus anyone in a vehicle you’re driving (including you) gains +1d to resistance rolls against collision damage.',
+    'Beat the Snake':'When there’s a question about who acts first, the answer is you (two characters with this ability act simultaneously).',
+    'Eleanor':'When you name your custom ride, you may choose an additional edge or mitigate one flaw. You may take this a second time to gain both benefits.',
+    'Shiny and Chrome':'You gain an additional xp trigger: You valued a vehicle more than your comrades.',
+    'Beastmaster':'Animals and wasteland creatures will not willingly harm you unless attacked. You can interact with these creatures in exchange for small favors, such as extending their tolerance to a small group or leading the way to a location.',
+    'Ghost and the Darkness':'You can push yourself to vanish in plain sight.',
+    'Shadow':'You may expend your special armor to resist consequences from detection or security or to push yourself for feats of athleticism or stealth.',
+    'Predator':'When you attack from hiding or spring a trap, you get +1d.',
+    'Snake Eater':'You get +1d to resistance rolls vs. poisons, drugs, and tainted food. Your tribe’s upkeep cost is reduced by 1.',
+    'Hunter’s Quarry':'When you hunt a target you’ve previously tracked or wounded, you gain +1 effect level.',
+    'Good Dog':'Your animal companion is a mutant, cyborg, or similarly unique example of its type. You do not take stress if you lead it in a team action. Additionally, choose a trait for your animal: fast as a car - ranged attack - psychic link - massive size. Take this ability again to choose a second trait.',
+    'Brave New World':'You gain an additional xp trigger: You made things harder by rejecting the World That Was. If this caused trouble for your tribe as a whole, also mark tribe xp.',
+    'Blackfinger':'You get an additional downtime activity to work on long-term projects involving technology or to acquire technological assets. You get +1d to this bonus activity.',
+    'Percussive Maintenance':'Two times per run, when you thump something that’s not working, it starts working.',
+    'Organic Mechanic':'You know proper surgical techniques and may provide medical treatment. When you spend a downtime action providing care, your patients get a free recovery action each downtime until healed.',
+    'Mechromancer':'When you invent or craft vehicles, robots, or drones, take +1 result level to your roll. You begin with one special design already known.',
+    'Boom Shakalaka':'Sometimes it’s easier to destroy than create. You may expend your special armor to resist consequences from explosions or engineering mishaps, or to push yourself for sabotage or mayhem.',
+    'Buried Treasure':'You know where to look for the good stuff. When you scrounge for assets, you get +1 effect.',
+    'Junk of All Trades':'Take 2 stress to roll your best action rating while performing a different action. Say how you adapt your skill to this use.',
+    'Blood, Sweat, and Gears':'You gain an additional xp trigger: You made progress on a new invention. If your project caused trouble for your tribe, also mark tribe xp.',
+    'History Buff':'When you bring your pre-war knowledge to bear when you read a situation, you get +1d. Rolls made to gather info about locations, people, or items from the World That Was have +1 effect.',
+    'Trusted User':'You know the Words of Passing and the Maidens’ Names. Pre-war security systems, robots, and AI do not consider you hostile unless you attack first. You get +1d to interact with these systems.',
+    'Wrong Guy, Wrong Place, Wrong Time':'You may expend your special armor to resist consequences from a desperate roll, or to push yourself in a desperate situation.',
+    'Pearly Whites':'You’ve got all your teeth! Gain +1d in situations where your appearance would be an advantage.',
+    'Listen Up You Primitive Screwheads':'When you lead a cohort in combat, they’re not taken out by level 3 harm. They gain +1 effect and 1 armor.',
+    'Future Shock':'Power armor is like a second skin to you. When you wear a bodytank, choose an additional edge or mitigate one flaw. You may take this a second time to gain both benefits.',
+    'Line in the Sand':'You gain an additional xp trigger: You suffered for doing the right thing. If your tribe also suffered for your quaint adherence to ancient morals, also mark tribe xp.',
+    'Doomed to Repeat It':'You gain an additional xp trigger: You worked toward making the wasteland more like Before. If your tribe helped you in your quest to rebuild society, also mark tribe xp.',
+    'Ghoul':'You are wizened, leathery, and tough. You may expend your special armor to resist physical harm. You are immune to radiation.',
+    'Superhuman':'You are freakishly-muscled and massive. You may push yourself to perform a feat of superhuman strength or speed. This factors into effect.',
+    'Scanner':'Your bloated brain swells with strange power. You may telepathically communicate with anyone you can see, and can push yourself to: locate all minds around you - move an object remotely - briefly control a person or animal - read a person’s thoughts',
+    'Wings':'You can fly as fast as a vehicle when you carry a light load, and as fast as a running person under a medium load. You can push yourself to carry another person or to fly under a heavy load.',
+    'Conduit':'You are bioluminescent and crackle with energy. You can push yourself to release the energy in a burst around you or as a directed beam or jet.',
+    'Venomous':'You are patterned and colorful. Choose a drug or poison to which you are immune. Push yourself to secrete it through your skin or exhale it as a vapor.',
+    'Invertebrate':'You are rubbery, slick, or squamous, able to contort through tiny spaces. You can perform feats of inhuman flexibility. If it’s a feat of plain old human flexibility, you get +1 effect level.',
+    'Lone Wolf':'You gain an additional xp trigger: You made things harder by acting alone. If your tribe ostracized you for your uncanny nature, also mark tribe xp.',
+    'Last One Standing':'When you’re outnumbered in close combat, you may push yourself to do one of the following: adjust your positioning - increase your scale to that of a small gang',
+    'Ayatollah of Rock’n’Rolla':'When you squander ammo, your ranged attacks gain +1 scale. You may take this ability a second time; this mitigates the requirement to waste ammo.',
+    'Blaze of Glory':'When you mark a trauma you may retaliate against any and all enemies within range. Say how you bring ruin to your foes before they take you down. You may mark a trauma prematurely to use this ability.',
+    'Roadkill':'When you attack from a vehicle, you gain +1d. If you are using personal weapons, your attacks gain +1 effect against vehicles.',
+    'Brute Squad':'When you lead a group action in a raid, you may count 6s across different rolls as a critical success.',
+    'Walk it Off':'Penalties from harm are one level less severe.',
+    'Not Today':'You may expend your special armor to resist harm from combat, appearing to die (fall off a vehicle, disappear in an explosion, etc.) only to reappear in a location of your choosing with a +1d to your next action.',
+    'Life is Cheap':'You gain an additional xp trigger: You chose to kill when you didn’t need to. If your tribe faced trouble because of your bloodthirst, also mark tribe xp.',
+    'Everybody’s Buddy':'Pay 2 stress to reveal an old friend or contact. This can be done on a run or during downtime.',
+    'Trust Me':'You seem trustworthy - until you’re not. When you lie to someone you haven’t yet lied to, you get +1d.',
+    'Takes One to Know One':'You can always tell when someone is lying to you.',
+    'Hoarder':'What your friends don’t know can’t hurt them. At the end of each downtime phase, you earn +2 stash.',
+    'Let’s You and Him Fight':'You get +1d when you participate in a group raid action or when you take a setup action that leads to violence for someone else.',
+    'Connected':'During downtime, you get +1 result level when you acquire an asset or reduce friction.',
+    'Silver Tongue':'You may expend your special armor to resist consequences from suspicion or persuasion, or to push yourself for deception or negotiation.',
+    'The Radscorpion and the Frog':'You gain an additional xp trigger: You exploited an ally for your own benefit.'
+};
+
 on("change:playbook", function(eventInfo) {
    getAttrs(['playbook'], function(vals) {
         // TODO only run if playbook matches playbook choices
@@ -459,6 +589,16 @@ on("sheet:opened change:repeating_playbookitems", function(eventInfo) {
     console.log('eventInfo on playbook items change', eventInfo);
     setLoad();
     //setAttrs({'repeating_playbookitems_playbook_load':7});
+});
+
+on("change:repeating_feats:featname", function(eventInfo) {
+    console.log('change event for special ability', eventInfo);
+    getAttrs(['repeating_feats_featname'], function(vals) {
+        console.log('featname is ', vals);
+        let perk = perks[vals.repeating_feats_featname];
+        console.log('perk is ' + perk);
+        setAttrs({'repeating_feats_featdesc':perk});
+    });
 });
 
 eventParams.forEach(function(component) {
