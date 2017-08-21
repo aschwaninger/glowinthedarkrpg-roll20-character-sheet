@@ -233,6 +233,9 @@ fieldset {
     border-bottom: 1px solid black;
 }
 
+.sheet-xptriggers {
+    width: 50%;
+}
 .sheet-load, .sheet-actions {
     width: 25%;
 }
