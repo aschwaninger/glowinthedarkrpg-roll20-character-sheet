@@ -312,6 +312,9 @@ div.sheet-clock {
 .sheet-xptriggers div span {
     font-style: italic;
 }
+.sheet-edgeflaws b {
+    display: block;
+}
 
 /*Selectables*/
 
@@ -320,15 +323,15 @@ input.sheet-selectable {
     left: -999em;
 }
 
-.sheet-bio label span:before {
+.sheet-bio label span:before, .sheet-edgeflaws label span:before {
     content: " - ";
 }
 
-.sheet-bio p label:nth-of-type(1) span:before {
+.sheet-bio p label:nth-of-type(1) span:before, .sheet-edgeflaws label:nth-of-type(1) span:before {
     content: none;
 }
 
-.sheet-bio label input:checked+span {
+.sheet-bio label input:checked+span, .sheet-edgeflaws label input:checked+span {
     color: #3c3;
 }
 
@@ -418,3 +421,12 @@ input[name='attr_ploaddots'][value="0"] + .sheet-playbookitem input[name="attr_p
     font-style: italic;
 }
 
+.sheet-extra {
+    display: none;
+}
+input[name='attr_extras'] {
+    display: none;
+}
+input[name='attr_extras']:checked + div {
+    display: block;
+}
