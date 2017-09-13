@@ -18,13 +18,69 @@
     				<input type="text" name="attr_look" value="" />
     				<b>Look</b>
     			</p>
-    			<p>
+    			<div> <!-- for some reason <p> tags close after the first div on chrome at least -->
     				<input type="text" name="attr_bg" value="" />
     				<b>Background:</b>
-    				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="1" /><span>On the Run</span></label>
-    				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="2" /><span>Vengeance</span></label>
-    				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="3" /><span>Web of Lies</span></label>
-    			</p>
+    				<input type="radio" name="attr_playbook_bg" value="driver" />
+    				<div class="sheet-background">
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="1" /><span>On the Run</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="2" /><span>Vengeance</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="3" /><span>Death Wish</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="4" /><span>Former Glory</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="5" /><span>Scavver</span></label>
+    				</div>
+    				<input type="radio" name="attr_playbook_bg" value="feral" />
+    				<div class="sheet-background">
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="6" /><span>Sole Survivor</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="7" /><span>Chosen One</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="8" /><span>Lost Tribe</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="9" /><span>Raised by Beasts</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="10" /><span>Hermit</span></label>
+    				</div>
+    				<input type="radio" name="attr_playbook_bg" value="junker" />
+    				<div class="sheet-background">
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="11" /><span>Machine Cult</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="12" /><span>Glow Diver</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="13" /><span>On the Run</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="14" /><span>Catastrophe</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="15" /><span>Educated</span></label>
+    				</div>
+    				<input type="radio" name="attr_playbook_bg" value="leftover" />
+    				<div class="sheet-background">
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="16" /><span>Fallout Shelter</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="17" /><span>Space Pod</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="18" /><span>Cryo</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="19" /><span>Lost City</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="20" /><span>Amnesia</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="21" /><span>Web of Lies</span></label>
+    				</div>
+    				<input type="radio" name="attr_playbook_bg" value="mutant" />
+    				<div class="sheet-background">
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="22" /><span>Exile</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="23" /><span>Clan War</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="24" /><span>Escaped</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="25" /><span>Commune</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="26" /><span>Living Legend</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="27" /><span>Glow Diver</span></label>
+    				</div>
+    				<input type="radio" name="attr_playbook_bg" value="reaper" />
+    				<div class="sheet-background">
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="28" /><span>Trained From Birth</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="29" /><span>Merc</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="30" /><span>Betrayal</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="31" /><span>Family</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="32" /><span>Vigilante</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="33" /><span>Pit Fighter</span></label>
+    				</div>
+    				<input type="radio" name="attr_playbook_bg" value="shark" />
+    				<div class="sheet-background">
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="34" /><span>Escaped</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="35" /><span>Web of Lies</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="36" /><span>Urchins</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="37" /><span>Former Glory</span></label>
+        				<label><input type="radio" name="attr_bg_options" class="sheet-selectable" value="38" /><span>Vendetta</span></label>
+    				</div>
+    			</div>
     			<p>
     				<input type="text" name="attr_taboo" value="" />
     				<b>Taboo:</b>
@@ -336,7 +392,9 @@
 					<label><input type="checkbox" class="sheet-selectable" name="attr_hack3" value="1" /><span class="sheet-dot"></span></label>
 					<label><input type="checkbox" class="sheet-selectable" name="attr_hack4" value="1" /><span class="sheet-dot"></span></label>
 					<b>Hack</b>
+					<!--
 					<button type="roll" name="roll_action_hack" value="/roll @{bonusdice} {{bonusdice=?{Number of Dice|1}}}d6kh1 in a ?{Position|controlled|risky|desperate} position with ?{Effect|standard|great|limited|extreme|zero} effect.">Hack</button>
+					-->
 					<input type="hidden" name="attr_hack" value="0" />
 				</li>
 				<li>
@@ -680,19 +738,28 @@ on("change:playbook", function(eventInfo) {
         setXP(vals.playbook.toLowerCase());
         switch (vals.playbook.toLowerCase()) {
             case 'driver':
-                setAttrs({'extras':'driver'});
+                setAttrs({'extras':'driver', 'playbook_bg':'driver'});
+                break;
+            case 'feral':
+                setAttrs({'extras':'foobar', 'playbook_bg':'feral'});
                 break;
             case 'leftover':
-                setAttrs({'extras':'leftover'});
+                setAttrs({'extras':'leftover', 'playbook_bg':'leftover'});
                 break;
             case 'junker':
-                setAttrs({'extras':'junker'});
+                setAttrs({'extras':'junker', 'playbook_bg':'junker'});
                 break;
             case 'mutant':
-                setAttrs({'extras':'mutant'});
+                setAttrs({'extras':'mutant', 'playbook_bg':'mutant'});
+                break;
+            case 'reaper':
+                setAttrs({'extras':'foobar', 'playbook_bg':'reaper'});
+                break;
+            case 'shark':
+                setAttrs({'extras':'foobar', 'playbook_bg':'shark'});
                 break;
             default:
-                setAttrs({'extras':'foobar'});
+                setAttrs({'extras':'foobar', 'playbook_bg':'foobar'});
         }
    });
 });
