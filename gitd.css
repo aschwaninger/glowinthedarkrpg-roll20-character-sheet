@@ -258,10 +258,13 @@ fieldset {
     width: 65%;
 }
 
-.sheet-actions h3, .sheet-supplies p, .sheet-xptriggers h3 {
+.sheet-actions h3, .sheet-supplies p, .sheet-xptriggers h3, .sheet-rep h3, .sheet-friction h3, .sheet-friction-dots {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.sheet-hatred {
+    float: right;
 }
 
 .sheet-friend, .sheet-supplies p {
@@ -395,7 +398,7 @@ select {
 }
 
 label input:checked+i {
-    border-color: #3c3;
+    background: #3c3;
 }
 
 .sheet-arrow-up {
@@ -424,9 +427,9 @@ input[name='attr_ploaddots'][value="0"] + .sheet-playbookitem input[name="attr_p
 .sheet-extra, .sheet-background {
     display: none;
 }
-input[name='attr_extras'], input[name='attr_playbook_bg'] {
+input[name='attr_extras'], input[name='attr_playbook_bg'], input[name='attr_favored_op'] {
     display: none;
 }
-input[name='attr_extras']:checked + div, input[name='attr_playbook_bg']:checked + div {
+input[name='attr_extras']:checked + div, input[name='attr_playbook_bg']:checked + div, input[name='attr_favored_op']:checked + div {
     display: block;
 }
