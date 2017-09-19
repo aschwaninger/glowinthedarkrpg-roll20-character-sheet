@@ -197,6 +197,16 @@ input:checked+label+.sheet-tab {
     flex-wrap: nowrap;
     align-items: center;
 }
+.sheet-cohort-dots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start!important;
+    justify-content: space-between;
+}
+.sheet-cohort-quality {
+    
+}
 .sheet-header h2 span {
     display: block;
 }
@@ -209,7 +219,7 @@ input:checked+label+.sheet-tab {
 .sheet-column-left {
     width: 50%;
 }
-.sheet-stress-trauma-supplies {
+.sheet-stress-trauma-supplies, .sheet-rep-turf-tier {
     display: flex;
     justify-content: space-between;
 }
@@ -233,14 +243,17 @@ fieldset {
     border-bottom: 1px solid black;
 }
 
-.sheet-xptriggers {
+.sheet-xptriggers, .sheet-abilities {
     width: 50%;
 }
-.sheet-load, .sheet-actions {
+.sheet-load, .sheet-actions, .sheet-upgrades, .sheet-contacts, .sheet-cohorts {
     width: 25%;
 }
-.sheet-actions {
+.sheet-actions, .sheet-cohorts, .sheet-contacts {
     float: right;
+}
+.sheet-cohort-dmg label {
+    display: block;
 }
 
 .sheet-load ul, .sheet-actions ul {
@@ -258,7 +271,7 @@ fieldset {
     width: 65%;
 }
 
-.sheet-actions h3, .sheet-supplies p, .sheet-xptriggers h3, .sheet-rep h3, .sheet-friction h3, .sheet-friction-dots {
+.sheet-actions h3, .sheet-supplies p, .sheet-xptriggers h3, .sheet-rep h3, .sheet-friction h3, .sheet-friction-dots, .sheet-cohorts h3, .sheet-cohort-dots {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -270,7 +283,7 @@ fieldset {
 .sheet-friend, .sheet-supplies p {
     margin-top: .25em;
 }
-.sheet-friend input {
+.sheet-friend input, .sheet-contact input {
     width: 70%;
 }
 .sheet-stress-dots {
@@ -305,8 +318,12 @@ div.sheet-harm input+b {
 div.sheet-notes {
     width:75%;
 }
-textarea[name=attr_notes] {
+textarea[name=attr_notes], textarea[name=attr_claims] {
     width: 100%;
+    border-radius:0;
+}
+textarea[name=attr_cohortnotes] {
+    height: 4em;
     border-radius:0;
 }
 div.sheet-clock {
